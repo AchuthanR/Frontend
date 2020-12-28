@@ -52,18 +52,18 @@ $(function () {
     })
 })
 function resources_show() {
-    $('.resources-list').addClass('flipInX')
+    $('.resources-list').addClass('bounce')
     document.getElementsByClassName('overlay')[0].style.msDisplay = "flex";
     document.getElementsByClassName('overlay')[0].style.display = "flex";
     document.getElementsByClassName('resources-list')[0].style.display = "block";
     setTimeout(function () {
-        $('.resources-list').removeClass('flipInX')
+        $('.resources-list').removeClass('bounce')
     }, 900)
 }
 function resources_close() {
-    $('.resources-list').addClass('flipOutX')
+    $('.resources-list').addClass('bounce')
     setTimeout(function () {
-        $('.resources-list').removeClass('flipOutX')
+        $('.resources-list').removeClass('bounce')
         document.getElementsByClassName('resources-list')[0].style.display = "none";
         document.getElementsByClassName('overlay')[0].style.display = "none";
     }, 900)
