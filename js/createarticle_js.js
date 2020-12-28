@@ -106,11 +106,6 @@ $(document).ready(function (x) {
             $('.publish-no').click()
         }
     })
-    $('.new-article').addClass('zoomIn')
-    document.getElementsByClassName('new-article')[0].style.visibility = "visible";
-    setTimeout(function () {
-        $('.new-article').removeClass('zoomIn')
-    }, 900)
 });
 function topics_desktop_open() {
     $('.topics-btn').addClass('fa-minus')

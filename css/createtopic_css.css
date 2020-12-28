@@ -486,7 +486,6 @@ body {
 .new-topic {
     margin-top: 100px;
     margin-bottom: 100px;
-    visibility: hidden;
 }
 .create-no {
     background-color: white;

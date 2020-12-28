@@ -144,11 +144,9 @@ function topics_mobile() {
 function new_topic() {
     document.getElementsByClassName('new-topic')[0].style.backgroundColor = "black";
     document.getElementsByClassName('new-topic')[0].style.color = "white";
-    $('.new-topic').addClass('zoomOut')
-    $('.new-article').addClass('fadeOutRightBig')
+    $('.new-article').addClass('zoomOut')
     setTimeout(function () {
-        $('.new-topic').removeClass('zoomOut')
-        $('.new-article').removeClass('fadeOutRightBig')
+        $('.new-article').removeClass('zoomOut')
     }, 900)
     setTimeout(function () {
         location.href = "createtopic";
@@ -157,11 +155,9 @@ function new_topic() {
 function new_article() {
     document.getElementsByClassName('new-article')[0].style.backgroundColor = "black";
     document.getElementsByClassName('new-article')[0].style.color = "white";
-    $('.new-article').addClass('zoomOut')
-    $('.new-topic').addClass('fadeOutRightBig')
+    $('.new-topic').addClass('zoomOut')
     setTimeout(function () {
-        $('.new-article').removeClass('zoomOut')
-        $('.new-topic').removeClass('fadeOutRightBig')
+        $('.new-topic').removeClass('zoomOut')
     }, 900)
     setTimeout(function () {
         location.href = "createarticle";

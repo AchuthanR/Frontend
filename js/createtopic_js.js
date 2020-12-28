@@ -92,11 +92,6 @@ $(document).ready(function (x) {
             $('.create-no').click()
         }
     })
-    $('.new-topic').addClass('zoomIn')
-    document.getElementsByClassName('new-topic')[0].style.visibility = "visible";
-    setTimeout(function () {
-        $('.new-topic').removeClass('zoomIn')
-    }, 900)
 });
 function topics_desktop_open() {
     $('.topics-btn').addClass('fa-minus')
