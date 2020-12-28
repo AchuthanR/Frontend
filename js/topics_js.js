@@ -52,21 +52,21 @@ $(function () {
     })
 })
 function resources_show() {
-    $('.resources-list').addClass('backInUp')
+    $('.resources-list').addClass('fadeInDown')
     document.getElementsByClassName('overlay')[0].style.msDisplay = "flex";
     document.getElementsByClassName('overlay')[0].style.display = "flex";
     document.getElementsByClassName('resources-list')[0].style.display = "block";
     setTimeout(function () {
-        $('.resources-list').removeClass('backInUp')
-    }, 900)
+        $('.resources-list').removeClass('fadeInDown')
+    }, 1000)
 }
 function resources_close() {
-    $('.resources-list').addClass('backOutDown')
+    $('.resources-list').addClass('fadeOutDown')
     setTimeout(function () {
-        $('.resources-list').removeClass('backOutDown')
+        $('.resources-list').removeClass('fadeOutDown')
         document.getElementsByClassName('resources-list')[0].style.display = "none";
         document.getElementsByClassName('overlay')[0].style.display = "none";
-    }, 900)
+    }, 1000)
 }
 function copy_clipboard(str) {
     const el = document.createElement('textarea');

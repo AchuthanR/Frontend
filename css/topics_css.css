@@ -86,12 +86,10 @@ body {
     }
     .not-a-member {
         margin-left: 50px;
-        margin-right: 40px;
         padding: 5px 15px !important;
     }
     .not-a-member:hover {
         margin-left: 50px;
-        margin-right: 40px;
         padding: 5px 15px !important;
     }
     .member {
