@@ -219,7 +219,8 @@ body {
     .website-name {
         position: absolute;
         top: 100px;
-        color: black
+        color: black;
+        font-size: 40px;
     }
     .not-a-member {
         margin-top: 30px;
