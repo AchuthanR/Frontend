@@ -212,7 +212,7 @@ function publish() {
 }
 function published() {
     window.scrollTo(0, 0)
-    location.href = "/create";
+    location.href = "create";
 }
 document.onkeydown = function (e) {
     var e = e || window.event; // for IE to cover IEs window event-object

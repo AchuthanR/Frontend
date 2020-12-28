@@ -151,7 +151,7 @@ function new_topic() {
         $('.new-article').removeClass('fadeOutRightBig')
     }, 900)
     setTimeout(function () {
-        location.href = "/createtopic";
+        location.href = "createtopic";
     }, 800)
 }
 function new_article() {
@@ -164,7 +164,7 @@ function new_article() {
         $('.new-topic').removeClass('fadeOutRightBig')
     }, 900)
     setTimeout(function () {
-        location.href = "/createarticle";
+        location.href = "createarticle";
     }, 800)
 }
 function created() {
