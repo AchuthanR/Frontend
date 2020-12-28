@@ -81,7 +81,7 @@ body {
         display: none !important
     }
     .parallax {
-        background-image: url("/Images/pexels-photo-606541.jpeg");
+        background-image: url("https://images.pexels.com/photos/606541/pexels-photo-606541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
         height: 750px;
         background-attachment: fixed;
         background-position: center;
