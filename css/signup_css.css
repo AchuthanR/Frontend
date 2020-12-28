@@ -1,0 +1,150 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Amaranth';
+    height: 100vh;
+    display: grid
+}
+body > form {
+    margin: auto
+}
+
+.website-name {
+    font-family: 'Alegreya SC';
+}
+
+.form-label-group, .checkbox, div > p {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400
+}
+
+@media screen and (min-width: 991.98px) {
+    .form-signup {
+        width: 400px;
+        background-color: white;
+        padding: 35px 60px !important;
+        border: 1px solid #f5f5f5;
+        border-radius: 40px 40px 40px 40px;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    body {
+        background-color: white;
+    }
+    .form-signup {
+        width: 90% !important;
+        background-color: white;
+        padding: 20px 20px !important;
+        border: 1px solid white;
+        border-radius: 30px 30px 30px 30px;
+    }
+    .form-label-group {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+.fa-feather-alt, .website-name {
+    cursor: pointer;
+}
+.form-signup {
+    width: 100%;
+    max-width: 420px;
+}
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-label-group > input, .form-label-group > label {
+    height: 3.125rem;
+    padding: .75rem;
+}
+.form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+.form-label-group input::placeholder {
+    color: transparent;
+}
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+.form-label-group input:focus {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+.form-label-group input:focus ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
+}
+.signup {
+    background-color: lightseagreen;
+    background-image: linear-gradient(to right, #2B32B2, #1488CC);
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 30px 30px 30px 30px;
+    transition: all 0.4s ease-in-out;
+}
+.signup:hover {
+    background-color: #2f89fc;
+    background-image: linear-gradient(to right, rgb(44, 83, 100) 20%, rgb(32, 58, 67) 50%, rgb(15, 32, 39));
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 30px 30px 30px 30px;
+}
+.signin-redirect {
+    background-color: transparent;
+    color: green;
+    text-align: center;
+    padding: 7px 15px;
+    margin-left: 10px;
+    border: 1px solid green;
+    border-radius: 5px 5px 5px 5px;
+    transition: all 0.6s ease-in-out;
+}
+.signin-redirect:hover {
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 15px;
+    border: 1px solid green;
+    border-radius: 5px 5px 5px 5px;
+}

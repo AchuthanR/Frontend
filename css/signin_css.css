@@ -1,0 +1,232 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Amaranth';
+    height: 100vh;
+    display: grid
+}
+body > form {
+    margin: auto
+}
+
+.website-name {
+    font-family: 'Alegreya SC';
+}
+.overlay {
+    font-family: 'Amaranth';
+}
+
+.form-label-group, .checkbox, div > p {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400
+}
+
+@media screen and (min-width: 991.98px) {
+    .content-mobile {
+        display: none
+    }
+    .form-signin {
+        background-color: white;
+        padding: 50px 60px !important;
+        border: 1px solid white;
+        border-radius: 40px 40px 40px 40px;
+    }
+    .suggestion-redirect {
+        color: white;
+        background-color: #222;
+        font-size: 20px;
+        position: relative;
+        top: -270px;
+        padding: 30px 50px;
+        border: 1px solid #222;
+        border-radius: 20px 20px 20px 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1
+    }
+    .suggestion-redirect > span {
+        margin-left: 20px
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    body {
+        background-color: white;
+    }
+    .content-mobile {
+        display: block
+    }
+    .form-signin {
+        width: 90% !important;
+        background-color: white;
+        padding: 20px 20px !important;
+        border: 1px solid white;
+        border-radius: 30px 30px 30px 30px;
+    }
+    .form-label-group {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .suggestion-redirect {
+        width: 350px;
+        color: white;
+        background-color: #222;
+        font-size: 20px;
+        position: relative;
+        top: -290px;
+        padding: 20px 30px;
+        border: 1px solid #222;
+        border-radius: 20px 20px 20px 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1
+    }
+    .suggestion-redirect > span {
+        display: inline-block;
+        margin-left: 7px;
+    }
+}
+
+.fa-feather-alt, .website-name {
+    cursor: pointer;
+}
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px 30px;
+}
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-label-group > input, .form-label-group > label {
+    height: 3.125rem;
+    padding: .75rem;
+}
+.form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+.form-label-group input::placeholder {
+    color: transparent;
+}
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+.form-label-group input:focus {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+.form-label-group input:focus ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
+}
+.signin {
+    background-color: lightseagreen;
+    background-image: linear-gradient(to right, #2B32B2, #1488CC);
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 30px 30px 30px 30px;
+    transition: all 0.6s ease-in-out;
+}
+.signin:hover {
+    background-color: #2f89fc;
+    background-image: linear-gradient(to right, rgb(44, 83, 100) 20%, rgb(32, 58, 67) 50%, rgb(15, 32, 39));
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 30px 30px 30px 30px;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    width: 100vw;
+    min-height: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1
+}
+.signup-redirect {
+    background-color: transparent;
+    color: green;
+    text-align: center;
+    padding: 7px 15px;
+    margin-left: 10px;
+    border: 1px solid green;
+    border-radius: 5px 5px 5px 5px;
+    transition: all 0.6s ease-in-out;
+}
+.signup-redirect:hover {
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 15px;
+    border: 1px solid green;
+    border-radius: 5px 5px 5px 5px;
+}
+.fa-times-circle {
+    color: white;
+    font-size: 50px;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+    .form-label-group > label {
+        display: none;
+    }
+    .form-label-group input::-ms-input-placeholder {
+        color: #777;
+    }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .form-label-group > label {
+        display: none;
+    }
+    .form-label-group input:-ms-input-placeholder {
+        color: #777;
+    }
+}

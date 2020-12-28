@@ -1,0 +1,461 @@
+html {
+    overflow-x: hidden
+}
+body {
+    padding-top: 52px;
+    background-color: white;
+    position: relative
+}
+
+@keyframes toAndFro {
+    from {
+        top: 10px;
+    }
+    to {
+        top: 15px;
+    }
+}
+@keyframes appearFromRight {
+    from {
+        left: -350px;
+        opacity: 0.4
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.navbar {
+    font-family: 'Alegreya SC';
+    font-size: 16px
+}
+.card-title {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700
+}
+.card-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400
+}
+.resources-list {
+    font-family: 'Amaranth';
+}
+.bottompanel .copyrights {
+    font-family: 'Alegreya SC';
+    font-size: 18px
+}
+
+@media screen and (min-width: 991.98px) {
+    ::-webkit-scrollbar {
+	    width: 6px;
+	    background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+	    background-color: #666666;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	    background-color: #444444;
+    }
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #666666 #cccccc;
+    }
+    .content-desktop {
+        display: block !important
+    }
+    .content-mobile {
+        display: none !important
+    }
+    .website-name {
+        padding-right: 17px;
+        border-right: 1px solid white;
+    }
+    .navbar-collapse {
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar-nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .topics {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .not-a-member {
+        margin-left: 50px;
+        margin-right: 40px;
+        padding: 5px 15px !important;
+    }
+    .not-a-member:hover {
+        margin-left: 50px;
+        margin-right: 40px;
+        padding: 5px 15px !important;
+    }
+    .member {
+        margin-left: 50px;
+        margin-right: 40px;
+    }
+    .member-menu {
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+    .dismiss-desktop {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+    .components {
+        margin-top: 150px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .background-color {
+        position: absolute;
+        height: 215px;
+        width: 100%;
+        background-color: lightseagreen;
+        top: 0;
+        left: 0;
+        border-radius: 0 0 20px 20px;
+        z-index: -1  
+    }
+    .tooltiptext-bottom {
+        visibility: hidden;
+        width: auto;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+    }
+    .tooltiptext-bottom::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black  transparent;
+    }
+    .resources-list {
+        background-color: #222;
+        color: white;
+        position: relative;
+        width: 500px;
+        top: -56px;
+        padding: 25px 40px;
+        border-radius: 15px 15px 15px 15px;
+        max-height: 70vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        display: none;
+        z-index: 1
+    }
+    .resources-list > ol {
+        list-style-type: disc;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+    .card-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .card-row > .card {
+        width: 40%;
+        max-width: 550px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .card-row > .card > .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-row > .card > .card-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+    }
+    .card-row > .card > img {
+        border: 0;
+        border-radius: 10px 10px 0 0;
+    }
+    .bottompanel {
+        padding: 50px 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white
+    }
+    .bottompanel > .row {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        margin-left: -90px;
+    }
+    .bottompanel > .row > div {
+        margin-left: 90px;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    ::-webkit-scrollbar {
+	    width: 3px;
+	    background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+	    background-color: #666666;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	    background-color: #444444;
+    }
+    .content-desktop {
+        display: none !important
+    }
+    .content-mobile {
+        display: block
+    }
+    .offcanvas-collapse {
+        position: fixed;
+        top: 56px; /* Height of navbar */
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-x: hidden;
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 11;
+        transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+        visibility: visible;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    .navbar-toggler {
+        float: right
+    }
+    .navbar-nav {
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+    .navbar-nav > li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .topics {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .not-a-member {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .member {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%, 0)
+    }
+    .member-menu {
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center
+    }
+    .resources-list {
+        background-color: #222;
+        color: white;
+        position: relative;
+        width: 90%;
+        top: -56px;
+        padding: 7% 8%;
+        border-radius: 10px 10px 10px 10px;
+        max-height: 50vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        display: none;
+        z-index: 1
+    }
+    .resources-list > ol {
+        list-style-type: square;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+    .card-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .card-row > .card {
+        width: 90%;
+        max-width: 500px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .card-row > .card > .card-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+    }
+    .card-row > .card > img {
+        border: 0;
+        border-radius: 10px 10px 0 0;
+    }
+    .bottompanel {
+        padding: 50px 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white
+    }
+    .bottompanel > .row {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        margin-left: -20px;
+    }
+    .bottompanel > .row > div {
+        margin-left: 20px;
+    }
+}
+
+.website-name {
+    font-size: 24px;
+    color: white;
+}
+.website-name:hover {
+    color: white;
+    text-decoration: none
+}
+.dropdown-toggle::after {
+    content: none;
+}
+#member-menu::after {
+    content: none;
+}
+.nav-item > a {
+    color: white !important;
+}
+.fa-user {
+    color: white;
+    font-size: 20px
+}
+.fa-user-cog {
+    color: white;
+    font-size: 20px
+}
+.navbar-collapse {
+    margin-top: -4px
+}
+.button {
+    background-color: rgb(15, 32, 39);
+    color: #f5f5f5;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    transition: all 0.4s ease-in-out;
+}
+.button:hover {
+    background-color: rgb(44, 83, 100);
+    color: #f5f5f5;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px 5px rgb(44, 83, 100) inset;
+}
+#member-menu {
+    color: white;
+    margin-left: 5px
+}
+#member-menu:hover {
+    text-decoration: none;
+}
+.topics-menu > .dropdown-item:hover {
+    background-color: #d6d6d6
+}
+.member-menu > .dropdown-item:hover {
+    background-color: #d6d6d6
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    top: 52px;
+    width: 100vw;
+    min-height: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000
+}
+.resources {
+	background-color: white;
+	color: green;
+	padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid green;
+    border-radius: 7px 7px 7px 7px;
+    transition: all 0.5s ease-in-out;
+}
+.resources:hover {
+	background-color: green;
+	color: white;
+	padding: 10px 20px;
+	margin-right: 10px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid green;
+	border-radius: 7px 7px 7px 7px
+}
+.resources-list > .fa-times {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    top: 10px;
+    right: 15px
+}
+.resources-list > ol > li > a {
+    color: white;
+}
+.resources-list > h2 {
+    color: lightseagreen
+}
+.bottompanel > .row > div > ul > li > a {
+    color: lightseagreen
+}

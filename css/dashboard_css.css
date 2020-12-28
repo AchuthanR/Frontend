@@ -1,0 +1,516 @@
+body {
+    overflow-x: auto;
+}
+
+.website-name {
+    font-family: 'Alegreya SC'
+}
+.admin {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700
+}
+.admin > button {
+    font-family: 'Merriweather', serif;
+    font-weight: 700
+}
+.dashboard > div:first-child, .view-published > div:first-child,
+.delete-published > div:first-child, .delete-topics > div:first-child, .edit-profile > div:first-child {
+    font-family: 'Merriweather', serif;
+    font-weight: 700
+}
+.dashboard, .view-published, .delete-published, .delete-topics, .edit-profile {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500
+}
+
+@media screen and (min-width: 991.98px) {
+    ::-webkit-scrollbar {
+	    width: 6px;
+	    background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+	    background-color: #666666;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	    background-color: #444444;
+    }
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #666666 #cccccc;
+    }
+    .content-mobile {
+        display: none
+    }
+    .website {
+        margin-top: -20px;
+        margin-bottom: 25px
+    }
+    .admin {
+        font-size: 14px;
+    }
+    .admin > button {
+        margin-left: 10px;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 250px;
+        z-index: 100;
+        padding: 48px 0 0;
+    }
+    .sidebar-sticky {
+        font-size: 16px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        margin-top: 116px;
+        height: calc(100vh - 116px);
+        overflow-y: auto;
+        position: relative;
+        left: 280px;
+        width: calc(100% - 310px);
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    main:after {  /*To overcome Firefox's bug or whatever regarding padding-bottom*/
+        content: '';
+        display: block;
+        padding-bottom: 50px;
+    }
+    main > div:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    .edit-profile {
+        display: none
+    }
+    .delete-topics {
+        display: none
+    }
+    .view-published {
+        display: none
+    }
+    .delete-published {
+        display: none
+    }
+    .admin-info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .admin-info > .card {
+        max-width: 400px;
+        margin-left: 20px;
+    }
+    .dashboard > .suggestions :not(hr):not(h2):not(i) {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .suggestions > span {
+        width: 30%;
+        min-width: 300px
+    }
+    .edit-profile > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group > input {
+        width: 500px
+    }
+    .input-group {
+        width: 500px
+    }
+    .form-check > input {
+        width: auto
+    }
+    .topics-list > span {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .topics-list > span > form > button {
+        background-color: white;
+    }
+    .topics-list > span > form > button:hover {
+        background-color: #dc3545;
+        border: 1px solid #dc3545
+    }
+    .topics-list > span > h5 {
+        word-wrap: break-word;
+        word-break: keep-all;
+        width: 70%
+    }
+    .topics-list > span > h6 {
+        word-wrap: break-word;
+        word-break: keep-all;
+        width: 250px;
+        margin-left: auto
+    }
+    .article-list {
+        margin-top: 25px
+    }
+    .article-list > span {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .article-list > span > a {
+        background-color: white;
+    }
+    .article-list > span > form > button {
+        background-color: white;
+    }
+    .article-list > span > h5 {
+        word-wrap: break-word;
+        word-break: keep-all;
+        width: 35%
+    }
+    .article-list > span > h6 {
+        word-wrap: break-word;
+        word-break: keep-all;
+        width: 20%
+    }
+    .topic {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .time-stamp {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    ::-webkit-scrollbar {
+	    width: 3px;
+	    background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+	    background-color: #666666;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	    background-color: #444444;
+    }
+    .content-mobile {
+        display: block
+    }
+    .fa-caret-down {
+        color: black;
+        font-size: 22px;
+        text-decoration: none !important;
+    }
+    .fa-caret-up {
+        color: black;
+        font-size: 22px;
+        text-decoration: none !important;
+    }
+    .website {
+        margin-top: 20px;
+        font-size: 0.5rem;
+    }
+    .admin {
+        position: relative;
+    }
+    .admin > button {
+        position: absolute;
+        right: 10px;
+        top: -2px
+    }
+    .sidebar {
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 3px 10px #ccc;
+    }
+    .sidebar-sticky {
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-link {
+        text-align: center;
+        display: none;
+    }
+    .active {
+        display: block !important;
+    }
+    main {
+        width: 100%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    main > div > h1 {
+        font-size: 28px !important;
+        margin-left: auto;
+        margin-right: auto;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+    main > div:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1;
+    }
+    .edit-profile {
+        display: none
+    }
+    .delete-topics {
+        display: none
+    }
+    .view-published {
+        display: none
+    }
+    .delete-published {
+        display: none
+    }
+    .admin-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .admin-info > .card {
+        width: 90%;
+        max-width: 400px;
+        margin-top: 10px;
+    }
+    .dashboard > .suggestions :not(hr):not(h2):not(i) {
+        display: flex;
+        flex-direction: column;
+    }
+    .suggestions > span {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .suggestions > span > form {
+        display: inline-block !important
+    }
+    .edit-profile > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        width: 100%;
+        max-width: 500px
+    }
+    .form-group > input {
+        max-width: 500px
+    }
+    .input-group {
+        max-width: 500px
+    }
+    .form-check > input {
+        width: auto
+    }
+    .edit-profile > form > button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .topics-list > span {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .topics-list > span > form > button {
+        background-color: white;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 110px;
+        display: block;
+    }
+    .topics-list > span > form > button:hover {
+        background-color: #dc3545 !important;
+        border: 1px solid #dc3545 !important
+    }
+    .topics-list > span > h5 {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .topics-list > span > h6 {
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-left: auto
+    }
+    .article-list > span {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .article-list > span > a {
+        background-color: white;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .article-list > span > form > button {
+        background-color: white;
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .article-list > span > h5 {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .article-list > span > h6 {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .topic {
+        margin-left: auto;
+    }
+    .time-stamp {
+        margin-left: auto;
+    }
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+.website {
+    cursor: pointer;
+}
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+.admin {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.admin > button {
+    background-color: #666;
+    color: white;
+    border: 1px solid #666
+}
+.admin > button:hover {
+    background-color: #888;
+    border: 1px solid #888
+}
+.admin-info > img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.suggestions {
+    margin-top: 50px
+}
+.suggestions > span {
+    max-width: 500px;
+    background-color: #f8f9fa;
+    display: inline-flex;
+    flex-direction: column !important;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px 10px 10px 10px;
+}
+.suggestions > span:hover {
+    box-shadow: 0px 0px 5px #aaa;
+}
+.suggestions > span > h4, h5 {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.suggestions > span > form > button {
+    background-color: white;
+}
+.card {
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white
+}
+.card > .card-body > .card-subtitle {
+    color: #999999
+}
+.topics-list > span:hover {
+    box-shadow: 0 0 5px #aaa;
+}
+.article-list > span:hover {
+    box-shadow: 0 0 5px #aaa;
+}
+form > .form-group > label {
+    font-weight: bold;
+}
+.fa-feather-alt {
+    font-size: 30px;
+}
+.fa-user-cog {
+    font-size: 20px;
+    margin-right: 5px
+}
+.fa-clock {
+    margin-right: 5px;
+    font-size: 17px;
+}
