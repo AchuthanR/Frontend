@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Home page containing details about the ideology behind the creation of this website and the topics covered in this website">
+    <title>Home • DecipherNotes</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <link href="css/home_css.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Images/favicon.ico" type="image/gif">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/home_js.js"></script>
+
+</head>
+
+<body ontouchstart="touch()">
+
+    <div class="parallax">
+        <img class="content-mobile" src="Images/pexels-photo-1684151.jpeg">
+        <h1 class="website-name" href="/index" target="_self">
+            <b>Decipher Notes</b>
+        </h1>
+        <a class="button-signup not-a-member" href="/signup" target="_self">Sign up</a>
+    </div>
+
+    <div class="member dropdown">
+        <a class="dropdown-toggle" href="" id="member-menu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"><i class="fa fa-user-cog"></i><i class="fa fa-user"></i> Member's
+            name</a>
+        <div class="dropdown-menu member-menu" aria-labelledby="member-menu">
+            <a class="dropdown-item" href="/dashboard" target="_self">Dashboard</a>
+            <a class="dropdown-item" href="#">Logout</a>
+        </div>
+    </div>
+
+    <a class="btn btn-primary" href="/signin" target="_self" style="padding: 7px 20px; margin-top: 20px; margin-right: 15px; float: right">Login</a>
+
+    <h1 style="color: #009f9d; font-family: 'Merriweather', serif; margin-top: 150px; font-weight: 700" align="center">Recent articles</h1>
+    <hr width="5%">
+    <br>
+    <br>
+
+    <div class="container recent-articles" align="justify">
+    
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui.
+                </p>
+                <p>
+                    <a class="btn btn-secondary" href="#" role="button">Read up &raquo;</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui. </p>
+                <p>
+                    <a class="btn btn-secondary" href="#" role="button">Read up &raquo;</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui.</p>
+                <p>
+                    <a class="btn btn-secondary" href="#" role="button">Read up &raquo;</a>
+                </p>
+            </div>
+        </div>
+        
+        <br>
+        <div align="center">
+            <h4>Explore more...</h4>
+            <a class="button" href="/topics">Topics</a>
+        </div>
+    
+    </div>
+    <br>
+    <hr>
+
+    <svg id="vec" viewBox="0 -450 1500 1500" class="content-desktop" style="width: 100%; height: 950px; position: absolute; opacity: 0.3; z-index: -1">
+    
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="100%" style="stop-color: #2B32B2; stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color :rgb(108, 2, 129); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: lightsalmon; stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color: lightseagreen; stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color: rgb(17, 147, 187); stop-opacity: 2" />
+            </linearGradient>
+        </defs>
+    
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300" fill="url(#grad1)" transform="translate(0, 25) rotate(-15)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad2)" transform="translate(350, 200) rotate(-15)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad3)" transform="translate(120, 525) rotate(-15)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad4)" transform="translate(700, -160) rotate(-15)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad5)" transform="translate(1000, 25) rotate(-15)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad6)" transform="translate(850, 335) rotate(-15)" />
+    
+    </svg>
+
+    <svg viewBox="-300 -650 900 2000" class="content-mobile"
+        style="width: 100%; height: 1660px; position: absolute; opacity: 0.3; z-index: -1">
+    
+        <defs>
+            <linearGradient id="grad7" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="100%" style="stop-color: rgb(255, 0, 0); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad8" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color: rgb(0, 248, 236); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad9" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: rgba(255, 170, 42, 0.932); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad10" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color: rgb(255, 0, 255); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad11" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 2" />
+            </linearGradient>
+            <linearGradient id="grad12" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color: lightsalmon; stop-opacity: 2" />
+            </linearGradient>
+        </defs>
+    
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300" fill="url(#grad7)" transform="translate(-400, -700) rotate(-30)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad8)" transform="translate(100, -450) rotate(-30)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad9)" transform="translate(-400, 50) rotate(-30)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad10)" transform="translate(100, 300) rotate(-30)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300" fill="url(#grad11)" transform="translate(-400, 800) rotate(-30)" />
+        <path d="   M 0 300 
+                    L 300 300 
+                    A 50 50 0 0 1 300 400
+                    L 0 400 
+                    A 50 50 0 0 1 0 300 " fill="url(#grad12)" transform="translate(100, 1050) rotate(-30)" />
+    
+    </svg>
+
+    <div class="content" align="center" style="margin-top: 20px">
+
+        <h1 style="color: #009f9d">Ideology</h1>
+        <hr width="3%" color="#393e46">
+        <br>
+        <h3>What is Lorem Ipsum?</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum.</p>
+        <h3>Why do we use it?</h3>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+            its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+            accident, sometimes on purpose (injected humour and the like).</p>
+        <h3>Where does it come from?</h3>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
+            comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
+            Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
+            The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+        
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content topics-covered" align="center">
+
+        <h1 style="color: #009f9d">Topics we cover</h1>
+        <hr width="5%" color="black">
+        <br>
+        
+        <div class="topic1">
+            <h3>Analog Electronics</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.</p>
+            <img class="img" src="https://www.eletimes.com/wp-content/uploads/2020/02/analog-electronics.jpg"
+                alt="Analog Electronics">
+            <br>
+            <br>
+            <a class="topic1-redirect-btn button" href="#">Analog Electronics</a>
+        </div>
+        <br>
+        <br>
+        <hr width="100%">
+        <br>
+        <br>
+        
+        <div class="topic2">
+            <h3>Digital Electronics</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.</p>
+            <img class="img" src="https://miro.medium.com/max/2880/0*ybvgB1ykiDrJBotf.jpg" alt="Digital Electronics">
+            <br>
+            <br>
+            <a class="topic2-redirect-btn button" href="#">Digital Electronics</a>
+        </div>
+        <br>
+        <br>
+        <hr width="100%">
+        <br>
+        <br>
+
+        <div class="topic3">
+            <h3>Mathematics</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.</p>
+            <img class="img"
+                src="https://d1sjtleuqoc1be.cloudfront.net/wp-content/uploads/2018/07/10121033/shutterstock_1017596791.jpg"
+                alt="Mathematics">
+            <br>
+            <br>
+            <a class="topic3-redirect-btn button" href="#">Mathematics</a>
+        </div>
+        <br>
+        <br>
+        <hr width="100%">
+        <br>
+        <br>
+
+        <div class="topic4">
+            <h3>Theory of Relativity</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.</p>
+            <img class="img"
+                src="https://secureservercdn.net/50.62.88.95/u2y.b57.myftpupload.com/wp-content/uploads/2018/01/dreamstime_s_48495836-759x450-759x445.jpg"
+                alt="Theory of Relativity">
+            <br>
+            <br>
+            <a class="topic4-redirect-btn button" href="#">Theory of Relativity</a>
+        </div>
+        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <svg id="svg1" viewBox="950 2100 2000 2000" style="width: 100vw; height: 1050px; position: absolute; z-index: -1; background-color: powderblue">
+        <defs>
+            <linearGradient id="grad-a" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="100%" style="stop-color: lightseagreen; stop-opacity: 2" />
+            </linearGradient>
+        </defs>
+        <path id="border_2" d="M 0 0 l 0 2850 q 850 250 1950 -30 q 1000 -250 1950 0 l 0 -2950" fill="url(#grad-a)" />
+    </svg>
+    <br>
+    <br class="content-mobile">
+    <br class="content-mobile">
+    <br class="content-mobile">
+    <br class="content-mobile">
+
+    <div align="center">
+
+        <div id="suggestion-box" align="center">
+			<form method="POST">
+                <label for="suggestion" style="font-size: 24px">
+                    <b>Suggestions</b>
+                </label>
+                <hr width="5%" color="black">
+                <p>Checked out our work?</p>
+                <textarea id="suggestion" name="suggestion" type="text" placeholder="Drop us your suggestions..." rows="5"
+                    aria-label="Suggestions" style="background-color: transparent; border: 1px solid black"></textarea>
+                <br>
+                <br class="content-desktop">
+                <button id="submit-suggestion" class="submit-suggestion">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    
+    <br>
+    <br>
+
+    <div class="about-redirect">
+        <span>Who are we?</span>
+        <a class="about-btn" href="/about">About us</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="overlay"></div>
+
+    <footer class="bottompanel">
+
+        <div class="content-mobile copyrights">
+            <strong>Decipher Notes</strong>
+            <small class="d-block" style="color: lightseagreen">&copy; 2020</small>
+            <small class="d-block mb-3" style="color: lightseagreen; cursor: pointer"
+                onclick="copy_clipboard(this.innerHTML)">editors.technophile@gmail.com</small>
+        </div>
+
+        <div class="row">
+
+            <div class="content-desktop copyrights">
+                <strong>Decipher Notes</strong>
+                <small class="d-block" style="color: lightseagreen">&copy; 2020</small>
+                <small class="d-block mb-3" style="color: lightseagreen; cursor: pointer"
+                    onclick="copy_clipboard(this.innerHTML)">editors.technophile@gmail.com</small>
+            </div>
+
+            <div>
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Cool stuff</a>
+                    </li>
+                    <li>
+                        <a href="#">Random feature</a>
+                    </li>
+                    <li>
+                        <a href="#">Team feature</a>
+                    </li>
+                    <li>
+                        <a href="#">Stuff for developers</a>
+                    </li>
+                    <li>
+                        <a href="#">Another one</a>
+                    </li>
+                    <li>
+                        <a href="#">Last time</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Resource</a>
+                    </li>
+                    <li>
+                        <a href="#">Resource name</a>
+                    </li>
+                    <li>
+                        <a href="#">Another resource</a>
+                    </li>
+                    <li>
+                        <a href="#">Final resource</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Business</a>
+                    </li>
+                    <li>
+                        <a href="#">Education</a>
+                    </li>
+                    <li>
+                        <a href="#">Government</a>
+                    </li>
+                    <li>
+                        <a href="#">Gaming</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

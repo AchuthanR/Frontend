@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Admin page for creating topics; viewing, writing and editing articles; reading user suggestions; and editing personal profile">
+    <meta name="robots" content="noindex">
+    <title>Dashboard • DecipherNotes</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="css/dashboard_css.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Images/favicon.ico" type="image/gif">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/dashboard_js.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="bg-light sidebar">
+
+                <div class="website" align="center" onclick="$(function () { location.href = '/index'; })">
+                    <i class="fa fa-feather-alt"></i>
+                    <h2 class="website-name">Decipher Notes</h2>
+                </div>
+                <hr>
+
+                <div class="admin" align="center">
+                    <i class="fa fa-user-cog"></i>Admin's name
+                    <button type="button" class="btn btn-sm btn-outline-secondary" href="#">Logout</button>
+                </div>
+                <hr>
+                
+                <a class="nav-link" href="/create">
+                    Create <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a class="nav-link" href="/topics">
+                    Topics <i class="fas fa-external-link-alt"></i>
+                </a>
+
+                <div class="sidebar-sticky">
+
+                    <hr class="nav-link" width="100%" style="margin-bottom: 0px">
+                    <a class="dashboard-btn nav-link active" href="#" onclick="dashboard()">
+                        Dashboard
+                    </a>
+                    <a class="edit-profile-btn nav-link" href="#" onclick="edit_profile()">
+                        Edit profile
+                    </a>
+                    <a class="delete-topics-btn nav-link" href="#" onclick="delete_topics()">
+                        Delete topics
+                    </a>
+                    <a class="view-published-btn nav-link" href="#" onclick="view_published()">
+                        Published articles
+                    </a>
+                    <a class="delete-published-btn nav-link" href="#" onclick="delete_published()">
+                        Delete published articles
+                    </a>
+                    <a class="content-mobile fa fa-caret-down" href="#" onclick="navigate_mobile()"></a>
+
+                </div>
+
+            </nav>
+    
+            <main class="dashboard">
+
+                <div>
+                    <h1 class="h2"><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+                </div>
+
+                <div class="admin-info">
+                    <img class="image"
+                        src="https://images.squarespace-cdn.com/content/v1/55c7a3e2e4b0fa365689d8aa/1440948965816-U5FAZGCNVLY2Y2SKC92R/ke17ZwdGBToddI8pDm48kGfiFqkITS6axXxhYYUCnlRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxQ1ibo-zdhORxWnJtmNCajDe36aQmu-4Z4SFOss0oowgxUaachD66r8Ra2gwuBSqM/1413880477_Business_Man-512.png"
+                        alt="Image">
+                    <div class="card">
+                        <div class="card-body" align="justify">
+                            <h5 class="card-title" align="center">Name</h5>
+                            <h6 class="card-subtitle mb-2">Short description about the person</h6>
+                            <hr color="white">
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                to make
+                                a type specimen book.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestions" align="center">
+                    <h2><i class="far fa-comment-alt" style="transform: translate(0, 5px) scaleX(-1)"></i> Suggestions <i class="far fa-comment-alt" style="transform: translate(0, 5px)"></i></h2>
+                    <hr width="300px">
+                    <span>
+                        <h4>Suggestion</h4>
+                        <hr width="100px" style="margin-bottom: 5px;">
+                        <h5>Username</h5>
+                        <form method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                        </form>
+                    </span>
+                    <span>
+                        <h4>Suggestion</h4>
+                        <hr width="100px" style="margin-bottom: 5px;">
+                        <h5>Username</h5>
+                        <form method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                        </form>
+                    </span>
+                </div>
+
+            </main>
+
+            <main class="edit-profile">
+
+                <div>
+                    <h1 class="h2"><i class="fas fa-edit"></i> Edit profile</h1>
+                </div>
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="short-desc">Short description (max. 2 sentences) *</label>
+                        <input type="text" class="form-control" id="short-desc" name="short-desc" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="brief-desc">Brief description *</label>
+                        <input type="text" class="form-control" id="brief-desc" name="brief-desc" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Photo (URL) *</label>
+                        <input type="text" class="form-control" id="image" name="image" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile URL</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend1"><i class="fab fa-linkedin"></i></span>
+                            </div>
+                            <input type="url" class="form-control" id="linkedin" name="linkedin" aria-describedby="inputGroupPrepend1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="github">GitHub Profile URL</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend2"><i class="fab fa-github"></i></span>
+                            </div>
+                            <input type="url" class="form-control" id="github" name="github" aria-describedby="inputGroupPrepend2" required>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="form-group form-check" align="center">
+                        <input type="checkbox" class="form-check-input" id="agreeToChange" required>
+                        <label class="form-check-label" for="agreeToChange">I agree to display my info in the 'About us' page.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    
+                </form>
+
+            </main>
+
+            <main class="delete-topics">
+
+                <div>
+                    <h1 class="h2"><i class="fas fa-trash"></i> Delete topics</h1>
+                </div>
+
+                <strong>Clicking the 'Delete Topic' button will delete the whole topic and all the articles published under that
+                    topic! Discuss
+                    with other authors before taking this action...</strong>
+                <br>
+                <br>
+
+                <div class="topics-list">
+                    <span>
+                        <h5>Topic 1</h5>
+                        <h6 class="no-of-articles">No. of articles: 5</h6>
+                        <form action="/delete/<%=topic.topicname%>" method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Delete Topic</button>
+                        </form>
+                    </span>
+                    <span>
+                        <h5>Topic 2</h5>
+                        <h6 class="no-of-articles">No. of articles: 10</h6>
+                        <form action="/delete/<%=topic.topicname%>" method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Delete Topic</button>
+                        </form>
+                    </span>
+                </div>
+
+            </main>
+
+            <main class="view-published">
+
+                <div>
+                    <h1 class="h2"><i class="far fa-file-word"></i> Published articles</h1>
+                </div>
+
+                <div class="article-list">
+                    <span>
+                        <h5>Article name</h5>
+                        <h6 class="topic">Topic 1</h6>
+                        <div class="time-stamp">
+                            <i class="fa fa-clock"></i>
+                            <span>05-May-2020 | 03:00 pm</span>
+                        </div>
+                        <a class="btn btn-sm btn-outline-secondary" href="#">View</a>
+                    </span>
+                    <span>
+                        <h5>Article name</h5>
+                        <h6 class="topic">Topic 2</h6>
+                        <div class="time-stamp">
+                            <i class="fa fa-clock"></i>
+                            <span>05-May-2020 | 03:00 pm</span>
+                        </div>
+                        <a class="btn btn-sm btn-outline-secondary" href="#">View</a>
+                    </span>
+                </div>
+
+            </main>
+
+            <main class="delete-published">
+
+                <div>
+                    <h1 class="h2"><i class="fas fa-trash"></i> Delete published articles</h1>
+                </div>
+
+                <div class="article-list">
+                    <span>
+                        <h5>Article name</h5>
+                        <h6 class="topic">Topic 1</h6>
+                        <div class="time-stamp">
+                            <i class="fa fa-clock"></i>
+                            <span>05-May-2020 | 03:00 pm</span>
+                        </div>
+                        <form action="/delete/<%=article.topic%>/<%=article.subtopic%>" method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Delete article</button>
+                        </form>
+                    </span>
+                    <span>
+                        <h5>Article name</h5>
+                        <h6 class="topic">Topic 2</h6>
+                        <div class="time-stamp">
+                            <i class="fa fa-clock"></i>
+                            <span>05-May-2020 | 03:00 pm</span>
+                        </div>
+                        <form action="/delete/<%=article.topic%>/<%=article.subtopic%>" method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Delete article</button>
+                        </form>
+                    </span>
+                </div>
+                
+            </main>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

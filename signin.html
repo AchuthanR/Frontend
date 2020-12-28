@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sign in to DecipherNotes to enable member-only features">
+    <title>Sign in • DecipherNotes</title>
+
+    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/signin_css.css" type="text/css">
+    <link rel="icon" href="Images/favicon.ico" type="image/gif">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.fa-feather-alt, .website-name').on('click', function () {
+                location.href = "/index";
+            })
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('redirect')) {
+                if (params.get('redirect') === 'suggestion') {
+                    suggestion_redirect()
+                }
+            }
+        })
+        function suggestion_redirect() {
+            setTimeout(function () {
+                $('.suggestion-redirect').addClass('slideInDown')
+                document.getElementsByClassName('overlay')[0].style.msDisplay = "flex";
+                document.getElementsByClassName('overlay')[0].style.display = "flex";
+                document.getElementsByClassName('suggestion-redirect')[0].style.display = "flex";
+                setTimeout(function () {
+                    $('.suggestion-redirect').removeClass('slideInDown')
+                    $('.suggestion-redirect').removeClass('slideOutUp')
+                    setTimeout(function () {
+                        $('.suggestion-redirect').removeClass('slideOutUp')
+                        document.getElementsByClassName('suggestion-redirect')[0].style.display = "none";
+                        document.getElementsByClassName('overlay')[0].style.display = "none";
+                    }, 1500)
+                }, 1000)
+            }, 700)
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form class="form-signin" method="POST">
+
+        <div class="text-center">
+            <h1 class="fa fa-feather-alt"></h1>
+            <h1 class="website-name">Decipher Notes</h1>
+            <hr width="33%">
+            <br>
+            <br>
+            <h3 class="mb-3">Sign in</h3>
+        </div>
+
+        <div class="form-label-group">
+            <input type="text" id="inputUsername" class="form-control" name="username" placeholder="Username" required autofocus>
+            <label for="inputUsername">Username</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+            <label for="inputPassword">Password</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+
+        <div align="center">
+            <button class="signin btn-lg animated" type="submit">Sign in</button>
+        </div>
+
+        <br>
+        <br>
+
+        <div align="center">
+            <p style="display: inline-block">Don't have an account?</p>
+            <a class="signup-redirect" href="/signup" type="button">Sign up</a>
+        </div>
+
+    </form>
+
+    <div class="overlay">
+    
+        <div class="suggestion-redirect animated" align="center">
+            <i class="fa fa-times-circle"></i>
+            <br class="content-mobile">
+            <span>Sign in to give suggestions...</span>
+        </div>
+    
+    </div>
+
+</body>
+</html>

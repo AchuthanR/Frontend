@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="color-scheme" content="dark light">
+    <title>Post • DecipherNotes</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+
+    <link href="css/postpage_css.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Images/favicon.ico" type="image/gif">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/postpage_js.js"></script>
+    <script src="js/readtime.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</head>
+
+<body ontouchstart="touch()" data-theme="dark">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        
+        <a class="website-name" href="/index" target="_self">Decipher Notes</a>
+
+        <div class="navbar-collapse offcanvas-collapse">
+
+            <ul class="navbar-nav" align="center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index" target="_self">Home</a>
+                </li>
+                <li class="nav-item dropdown topics">
+                    <span>
+                        <button class="content-mobile fa fa-plus topics-btn" onclick="topics_mobile()"></button>
+                        <a class="nav-link topics-text" href="/topics" target="_self" onmouseover="topics_desktop_open()" onmouseout="topics_desktop_close()" style="color: white"> Topics</a>
+                    </span>
+                    <div class="dropdown-menu topics-menu" onmouseover="topics_desktop_open()" onmouseout="topics_desktop_close()">
+                        <a class="dropdown-item" href="#" target="_self">Analog Electronics</a>
+                        <a class="dropdown-item" href="#" target="_self">Digital Electronics</a>
+                        <a class="dropdown-item" href="#" target="_self">Mathematics</a>
+                        <a class="dropdown-item" href="#" target="_self">Theory of Relativity</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" target="_self">About us</a>
+                </li>
+            </ul>
+            
+            <i class="content-desktop fas fa-moon" onclick="dark_mode_switch()"></i>
+            <a class="button not-a-member" href="/signin" target="_self">Login</a>
+
+            <div class="member dropdown">
+                <a class="dropdown-toggle" href="" id="member-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                        class="fa fa-user-cog"></i><i class="fa fa-user"></i> Member's name</a>
+                <div class="dropdown-menu member-menu" aria-labelledby="member-menu">
+                    <a class="dropdown-item" href="/dashboard" target="_self">Dashboard</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+
+        </div>
+
+        <i class="content-mobile fas fa-moon" onclick="dark_mode_switch()"></i>
+
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+            <span class="fa fa-bars" style="font-size: 25px; color: white"></span>
+        </button>
+
+    </nav>
+
+    <div class="page-scroll-indicator">
+        <div class="progress"></div>
+    </div>
+
+    <div class="sidebar-icon">
+        <span class="active-page"><i class="fa fa-list-ul"></i></span>
+    </div>
+
+    <nav id="sidebar" class="animated" ontouchstart="swipe1(event)" ontouchmove="swipe2(event)" ontouchend="swipe3()">
+    
+        <div class="background-color"></div>
+
+        <div class="content-desktop dismiss-desktop">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+
+        <hr class="content-mobile hoz-ruler">
+
+        <div class="content-mobile dismiss-mobile">
+            <i class="fa fa-angle-double-down"></i>
+        </div>
+    
+        <br class="content-desktop">
+
+        <h2 class="sidebar-header">Topic name</h2>
+    
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#" target="_self">Sub-topic 1</a>
+            </li>
+            <li>
+                <a href="#" target="_self">Sub-topic 2</a>
+            </li>
+            <li>
+                <a href="#" target="_self">Sub-topic 3</a>
+            </li>
+            <li>
+                <a href="#" target="_self">Sub-topic 4</a>
+            </li>
+            <li>
+                <a href="#" target="_self">Sub-topic 5</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="outline-icon" onclick="outline_show()">
+        <i class="fa fa-bookmark"></i>
+        <div class="content-desktop tooltiptext-left">
+            Outline
+            <br>
+            <i>Shortcut: Shift + b</i>
+        </div>
+    </div>
+
+    <div class="article">
+
+        <h1 align="center">Lorem Ipsum</h1>
+        <hr width="180px" color="black">
+
+        <div class="writer">
+            <i class="fa fa-user-edit"></i>
+            <div class="author" align="center">
+                <span>Author's name</span>
+                <hr style="margin-top: 3px; margin-bottom: 2px" color="black">
+                <span class="reading-time"></span>
+            </div>
+        </div>
+        <hr width="180px" color="black">
+        <br>
+
+        <h2>What is Lorem Ipsum?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h2>Why do we use it?</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here, content here', making it look like readable English. Many desktop
+            publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for
+            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <h2>Where does it come from?</h2>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
+            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
+            during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+            section 1.10.32.</p>
+        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+            original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        <h2>Where can I get some?</h2>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+            some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+            going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+            middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+            necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
+            words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+            The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic
+            words etc.</p>
+
+    </div>
+
+    <div class="overlay">
+
+        <div class="outline animated">
+            <i class="fa fa-times" onclick="outline_close()"></i>
+            <h2>Topic</h2>
+            <ol>
+            </ol>
+        </div>
+
+    </div>
+
+    <footer class="bottompanel">
+
+        <div class="content-mobile copyrights">
+            <strong>Decipher Notes</strong>
+            <small class="d-block" style="color: lightseagreen">&copy; 2020</small>
+            <small class="d-block mb-3" style="color: lightseagreen; cursor: pointer"
+                onclick="copy_clipboard(this.innerHTML)">editors.technophile@gmail.com</small>
+        </div>
+
+        <div class="row">
+
+            <div class="content-desktop copyrights">
+                <strong>Decipher Notes</strong>
+                <small class="d-block" style="color: lightseagreen">&copy; 2020</small>
+                <small class="d-block mb-3" style="color: lightseagreen; cursor: pointer"
+                    onclick="copy_clipboard(this.innerHTML)">editors.technophile@gmail.com</small>
+            </div>
+
+            <div>
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#">Cool stuff</a></li>
+                    <li><a href="#">Random feature</a></li>
+                    <li><a href="#">Team feature</a></li>
+                    <li><a href="#">Stuff for developers</a></li>
+                    <li><a href="#">Another one</a></li>
+                    <li><a href="#">Last time</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#">Resource</a></li>
+                    <li><a href="#">Resource name</a></li>
+                    <li><a href="#">Another resource</a></li>
+                    <li><a href="#">Final resource</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Gaming</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

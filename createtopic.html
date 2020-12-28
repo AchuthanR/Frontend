@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This page is for creating new topics">
+    <meta name="robots" content="noindex">
+    <title>Create Page • DecipherNotes</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <link href="css/createtopic_css.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Images/favicon.ico" type="image/gif">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/createtopic_js.js"></script>
+
+</head>
+
+<body ontouchstart="touch()">
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+
+        <a class="website-name" href="/index" target="_self">Decipher Notes</a>
+
+        <div class="navbar-collapse offcanvas-collapse">
+
+            <ul class="navbar-nav" align="center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index" target="_self">Home</a>
+                </li>
+                <li class="nav-item dropdown topics">
+                    <span>
+                        <button class="content-mobile fa fa-plus topics-btn" onclick="topics_mobile()"></button>
+                        <a class="nav-link topics-text" href="/topics" target="_self"
+                            onmouseover="topics_desktop_open()" onmouseout="topics_desktop_close()"
+                            style="color: white"> Topics</a>
+                    </span>
+                    <div class="dropdown-menu topics-menu" onmouseover="topics_desktop_open()" onmouseout="topics_desktop_close()">
+                        <a class="dropdown-item" href="#" target="_self">Analog Electronics</a>
+                        <a class="dropdown-item" href="#" target="_self">Digital Electronics</a>
+                        <a class="dropdown-item" href="#" target="_self">Mathematics</a>
+                        <a class="dropdown-item" href="#" target="_self">Theory of Relativity</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" target="_self">About us</a>
+                </li>
+            </ul>
+
+            <div class="member dropdown">
+                <a class="dropdown-toggle" href="" id="member-menu" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-user-cog"></i>Admin's name</a>
+                <div class="dropdown-menu member-menu" aria-labelledby="member-menu">
+                    <a class="dropdown-item" href="/dashboard" target="_self">Dashboard</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+            <span class="fa fa-bars" style="font-size: 25px; color: white"></span>
+        </button>
+
+    </nav>
+
+    <div class="new-topic animated">
+
+        <br>
+        <h2 align="center" style="cursor: default; font-family: 'Alegreya SC'">CREATE A NEW TOPIC</h2>
+        <hr align="center" width="10%" color="#393e46" style="height: 1px">
+        <br>
+        <br>
+
+        <form method="POST" name="topicform" id="topicform">
+
+            <label for="new-topic-name" class="label">Name of the new topic:</label>
+            <br class="content-mobile">
+            <input id="new-topic-name" class="input" name="topic" placeholder="Enter the topic name" required>
+            
+            <br style="clear: both">
+            
+            <label for="new-topic-img" class="label">URL of the descriptive image:</label>
+            <br class="content-mobile">
+            <input id="new-topic-img" class="input" name="image" placeholder="Enter the URL" required>
+            
+            <br style="clear: both">
+            
+            <label for="new-topic-desc" class="label">Description of the new topic:</label>
+            <br class="content-mobile">
+            <textarea id="new-topic-desc" class="input" name="description" placeholder="Enter the description" rows="5"
+                required></textarea>
+            
+        </form>
+
+        <br style="clear: both">
+
+        <button id="create-topic" onclick="create()">Create</button>
+        <br>
+        <br>
+    
+    </div>
+
+    <div class="overlay">
+
+        <div class="create-confirmation animated" align="center">
+            Do you want to continue and create this new topic?
+            <br>
+            <br>
+            Topic:
+            <p class="create-topic"></p>
+            <br>
+            <button class="create-yes" onclick="created()">Yes</button>
+            <button class="create-no">Not yet</button>
+        </div>
+
+    </div>
+
+    <footer class="bottompanel">
+
+        <div class="content-mobile copyrights">
+            <strong>Decipher Notes</strong>
+            <small class="d-block mb-3" style="color: lightseagreen">&copy; 2020</small>
+        </div>
+
+        <div class="row">
+
+            <div class="content-desktop copyrights">
+                <strong>Decipher Notes</strong>
+                <small class="d-block mb-3" style="color: lightseagreen">&copy; 2020</small>
+            </div>
+
+            <div>
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Cool stuff</a>
+                    </li>
+                    <li>
+                        <a href="#">Random feature</a>
+                    </li>
+                    <li>
+                        <a href="#">Team feature</a>
+                    </li>
+                    <li>
+                        <a href="#">Stuff for developers</a>
+                    </li>
+                    <li>
+                        <a href="#">Another one</a>
+                    </li>
+                    <li>
+                        <a href="#">Last time</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Resource</a>
+                    </li>
+                    <li>
+                        <a href="#">Resource name</a>
+                    </li>
+                    <li>
+                        <a href="#">Another resource</a>
+                    </li>
+                    <li>
+                        <a href="#">Final resource</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Business</a>
+                    </li>
+                    <li>
+                        <a href="#">Education</a>
+                    </li>
+                    <li>
+                        <a href="#">Government</a>
+                    </li>
+                    <li>
+                        <a href="#">Gaming</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a href="#">Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </footer>
+
+</body>
+</html>
